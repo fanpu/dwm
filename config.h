@@ -95,6 +95,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	/* Custom key bindings */
+	/* moveresize patch */
 	{ MODKEY,			XK_Down,	moveresize,		{.v = (int []){ 0, 25, 0, 0 }}},
 	{ MODKEY,			XK_Up,		moveresize,		{.v = (int []){ 0, -25, 0, 0 }}},
 	{ MODKEY,			XK_Right,	moveresize,		{.v = (int []){ 25, 0, 0, 0 }}},
@@ -120,14 +121,5 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	/* Custom keybindings below */
-	{ MODKEY,		XK_Down,	moveresize,		{.v = (int []){ 0, 25, 0, 0 }}},
-	{ MODKEY,		XK_Up,		moveresize,		{.v = (int []){ 0, -25, 0, 0 }}},
-	{ MODKEY,		XK_Right,	moveresize,		{.v = (int []){ 25, 0, 0, 0 }}},
-	{ MODKEY,		XK_Left,	moveresize,		{.v = (int []){ -25, 0, 0, 0 }}},
-	{ MODKEY|ShiftMask,	XK_Down,	moveresize,		{.v = (int []){ 0, 0, 0, 25 }}},
-	{ MODKEY|ShiftMask,	XK_Up,		moveresize,		{.v = (int []){ 0, 0, 0, -25 }}},
-	{ MODKEY|ShiftMask,	XK_Right,	moveresize,		{.v = (int []){ 0, 0, 25, 0 }}},
-	{ MODKEY|ShiftMask,	XK_Left,	moveresize,		{.v = (int []){ 0, 0, -25, 0 }}},
 };
 
